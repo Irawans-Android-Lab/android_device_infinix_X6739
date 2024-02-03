@@ -11,10 +11,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/infinix/X6739/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common DerpFest stuff.
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_X6739
+# Face unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+PRODUCT_NAME := derp_X6739
 PRODUCT_DEVICE := X6739
 PRODUCT_MANUFACTURER := INFINIX
 PRODUCT_BRAND := Infinix
